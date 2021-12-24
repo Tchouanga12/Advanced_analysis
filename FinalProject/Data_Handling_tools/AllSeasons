@@ -1,0 +1,18 @@
+import requests
+
+url = "https://elenasport-io1.p.rapidapi.com/v2/seasons"
+
+querystring = {"page":"2"}
+
+headers = {
+    'x-rapidapi-host': "elenasport-io1.p.rapidapi.com",
+    'x-rapidapi-key': "c1858f9ca6mshb6842cc846ee798p1f633cjsnb369850f3cb9"
+    }
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+#print(response.text)
+
+for i in response.json()["data"]:
+    print(i)
+

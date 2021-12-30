@@ -1,7 +1,7 @@
 import discord
 
 ##Personal information of the bit
-#TOKEN = 'OTE4MTY2NDU2NzQ5OTIwMzQ2.YbDTJQ._R_e0aIVOYf1xSnBLwkFPn9bFRU'
+TOKEN = 'OTE4MTY2NDU2NzQ5OTIwMzQ2.YbDTJQ._R_e0aIVOYf1xSnBLwkFPn9bFRU'
 ##Doscird channel also know as guild
 GUILD = 'PGE2 ADAV'
 

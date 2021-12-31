@@ -1,7 +1,7 @@
 import discord
 
 ##Personal information of the bit
-#TOKEN = 'OTE4MTY2NDU2NzQ5OTIwMzQ2.YbDTJQ.Mc3BEofvI6d_nDrulhiE1ooYfNk'
+#TOKEN = 'OTE4MTY2NDU2NzQ5OTIwMzQ2.YbDTJQ.PFoohox4W-8RlzCuy5V-JMtfEpc'
 ##Doscird channel also know as guild
 GUILD = 'PGE2 ADAV'
 
@@ -37,5 +37,5 @@ async def on_message(message):
     if message.content in ['1','2']:
         await message.channel.send(f'{message.author.name} the content is not yet available come back soon 🖖')
 
-client.run(TOKEN)
+#client.run(TOKEN)
 

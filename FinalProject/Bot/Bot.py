@@ -2,10 +2,11 @@ import discord
 import sys
 import os
 sys.path.append(os.getcwd())
-from FinalProject.Data_Handling_tools.visualize import football
+#from FinalProject.Data_Handling_tools.visualize import football
+from FinalProject.Data_Handling_tools.visualize2 import football
 
 ##Personal information of the bit
-TOKEN = 'OTE4MTY2NDU2NzQ5OTIwMzQ2.YbDTJQ.XSE8FCuzUPBepLE3yc2PednQs70'
+TOKEN = ''
 ##Discord channel also know as guild
 GUILD = 'PGE2 ADAV'
 
@@ -31,19 +32,20 @@ async def on_message(message):
         await message.channel.send("What's up, hope you are good")
         await message.channel.send('I can provide you with the most recent football⚽ data just by magic. Just follow my instruction to get that 😀')
         await message.channel.send("--------")
-        await message.channel.send('* Type 1 to get the top 5 scores in the current league🥅\n* Type 2 to get Statistics about the most recent matches📊')
+        await message.channel.send('* Type 1 to get the top 5 scores in the current league🥅\n'
+        '* Type Lille to get the most recent statistics of "Lille" throughout wins, defeats and draws📊\n')
         await message.channel.send("--------")
     
-    if message.content not in ['hello','1','2'] and message.author != client.user:
+    if message.content not in ['hello','1','2','3','4','5','6'] and message.author != client.user:
         await message.channel.send(f"{message.author.name} I don't understand, I only know football data. Type hello to discuss with me.")
         
-    if message.content == '1':
+    if message.content == 'cool':
         await message.channel.send(f' Yeah I know {message.author.name},try another option again. 😀')
     if message.content == '1':
         await message.channel.send(f'{message.author.name}, I am happy to serve you. 🖖')
         await message.channel.send(file=discord.File(football().visualize_command(1)))
     
-    if message.content == '2':
+    if message.content.lower() == 'lille':
         await message.channel.send(f'{message.author.name}, I am happy to serve you. 🖖')
         await message.channel.send(file=discord.File(football().visualize_command(2)))
 
